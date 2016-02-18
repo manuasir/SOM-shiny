@@ -1,5 +1,5 @@
-# Manuel Jiménez Bernal - 2016
-# Iliberi S.A. Granada,Spain
+# Author: Manuel Jiménez Bernal - manu.asi2@gmail.com
+# Iliberi S.A. Granada,Spain - 02/2016
 
 ######## SOM GENERATOR ###########
 

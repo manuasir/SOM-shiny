@@ -1,5 +1,5 @@
-# Manuel Jiménez Bernal - 2016
-# Iliberi S.A. Granada,Spain
+# Author: Manuel Jiménez Bernal - manu.asi2@gmail.com
+# Iliberi S.A. Granada,Spain - 02/2016
 
 ######## SOM GENERATOR ###########
 
@@ -21,6 +21,8 @@ shinyServer(function(input, output, session) {
     players<-read.csv(inFile$datapath, header=input$header, sep=input$sep,quote=input$quote,stringsAsFactors=FALSE)
    
   })
+
+
 
 #Función reactiva que genera la estructura del SOM
 
