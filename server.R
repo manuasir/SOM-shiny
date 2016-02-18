@@ -63,7 +63,7 @@ shinyServer(function(input, output, session) {
   output$downloadData <- downloadHandler(
     filename = "shinyplot.png",
     content = function(file) {
-        png(file)
+        png(file,width=800,height=800)
         generaGrafico()
         dev.off()
     })
