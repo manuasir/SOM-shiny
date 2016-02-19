@@ -2,6 +2,6 @@ name: SOM-shiny
 account: iliberi
 server: shinyapps.io
 appId: 84129
-bundleId: 375454
+bundleId: 376095
 url: https://iliberi.shinyapps.io/SOM-shiny/
-when: 1455797485.0105
+when: 1455884673.45001
