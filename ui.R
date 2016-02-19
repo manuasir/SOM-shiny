@@ -30,7 +30,7 @@ shinyUI(fluidPage(
                   selected = 1),
 
       sliderInput("slider1", label = "Granularidad X", min = 1, 
-                    max = 50, value = 10),
+                    max = 50, value = 5),
       sliderInput("slider2", label = "Granularidad Y", min = 1, 
                     max = 50, value = 5),
        downloadButton('downloadData', 'Descargar Grafico (PNG)'),
@@ -38,7 +38,12 @@ shinyUI(fluidPage(
     ),
   
     mainPanel(
-       plotOutput('salida', width = "100%",click = "plot_click",hover = "plot_hover") 
+      navbarPage(
+        title = 'SOM Generator',
+        tabPanel('Tabla',      helpText(" Esta tabla muestra el contenido de los datos introducidos. Con el fin de generar los diagramas todos los valores deben ser numéricos."),
+                  DT::dataTableOutput('tabla')   ),
+        tabPanel('Diagramas',     plotOutput('salida', width = "100%",click = "plot_click",hover = "plot_hover") )
+        )
     )  
   )
 ))

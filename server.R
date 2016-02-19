@@ -17,12 +17,13 @@ shinyServer(function(input, output, session) {
 #Leer datos desde fichero CSV. Todos los valores deben ser numéricos.
 
   dataInput <- reactive({
+
+    
+ 
     inFile <- input$file1
     players<-read.csv(inFile$datapath, header=input$header, sep=input$sep,quote=input$quote,stringsAsFactors=FALSE)
    
   })
-
-
 
 #Función reactiva que genera la estructura del SOM
 
@@ -76,7 +77,13 @@ shinyServer(function(input, output, session) {
     }
   )
 
-
+ output$tabla <- DT::renderDataTable(
+  if (is.null(input$file1))
+      return(NULL)
+    else{
+    DT::datatable(dataInput(), options = list(searching = FALSE))
+  }
+  )
 
 })
 
